@@ -42,13 +42,9 @@ public class AutoTransport : MonoBehaviour
     void walk(Transform _target, float _speed)
     {
         float _distance = Vector3.Distance(transform.position, _target.position);
-        if (Vector3.Distance(transform.position, _target.position) < 0.25)
-        {
-           
-        }
+        // todo should work with dotween path too
         transform.DOMove(_target.position, _distance / _speed).OnComplete(()=>NextPoint());
 
-        
     }
     private void NextPoint()
     {
