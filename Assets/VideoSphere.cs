@@ -39,8 +39,6 @@ namespace VRShowcase.Media
             m_meshRenderer.enabled = false;
             m_videoPlayer.enabled = false;
             m_collider.enabled = false;
-
-            PlayVideo("Test");
         }
         public void PlayVideo(string _videoName)
         {
@@ -53,10 +51,10 @@ namespace VRShowcase.Media
                     ToggleVisibility(1);
                     m_collider.enabled = true;
                     m_videoPlayer.clip = _vt.Video;
-                    m_videoPlayer.SetTargetAudioSource(0,GetComponent<AudioSource>());
+                    m_videoPlayer.SetTargetAudioSource(0, GetComponent<AudioSource>());
                     StartCoroutine(StopVideoWhenFinished(_vt.Video.length));
-                    m_videoPlayer.Play();             
-                    VideoPlayerState = VIDEOPLAYERSTATES.PLAYING;                 
+                    m_videoPlayer.Play();
+                    VideoPlayerState = VIDEOPLAYERSTATES.PLAYING;
                     return;
                 }
             }
@@ -64,17 +62,20 @@ namespace VRShowcase.Media
         public void StopVideo()
         {
             // todo proper stop button!
-                m_videoPlayer.Stop();
-                VideoPlayerState = VIDEOPLAYERSTATES.STOP;
-                ToggleVisibility(0);
+            m_videoPlayer.Stop();
+            VideoPlayerState = VIDEOPLAYERSTATES.STOP;
+            ToggleVisibility(0);
         }
 
         private IEnumerator StopVideoWhenFinished(double _time)
         {
             Debug.Log((float)_time);
             yield return new WaitForSeconds((float)_time);
-            Debug.Log("Video finished");
-            StopVideo();
+            if (VideoPlayerState != VIDEOPLAYERSTATES.STOP)
+            {
+                StopVideo();
+            }
+
         }
 
         private void ToggleVisibility(byte _endAlpha = 1)
@@ -85,10 +86,10 @@ namespace VRShowcase.Media
             }
             else
             {
-                m_videoMaterial.DOColor(new Color(0.5f, 0.5f, 0.5f, (0.5f * _endAlpha)), "_TintColor", 5f).OnComplete(() => TogglePlayer(false)) ;
+                m_videoMaterial.DOColor(new Color(0.5f, 0.5f, 0.5f, (0.5f * _endAlpha)), "_TintColor", 5f).OnComplete(() => TogglePlayer(false));
             }
-            
-           
+
+
         }
         private void TogglePlayer(bool _active)
         {

@@ -9,10 +9,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c056fb2821f38048a5840d3e35d640c, type: 3}
-  m_Name: TestLabel
+  m_Name: StartVideoLabel
   m_EditorClassIdentifier: 
   LabelBaseObject: {fileID: 1136632073048514, guid: e3671f277ee7f25469f1db7573541f15,
     type: 2}
   LabelImage: {fileID: 0}
-  LabelText: SomeText
-  OnClickEvent: LABEL_CLICKED
+  LabelText: Start Video
+  OnClickEvent: START_VIDEO
