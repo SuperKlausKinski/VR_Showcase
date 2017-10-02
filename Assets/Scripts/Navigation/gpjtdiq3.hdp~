@@ -1,0 +1,34 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+namespace VRControlls.Navigation
+{
+    public class WaypointNavigation : MonoBehaviour
+    {
+
+        private Camera m_mainCamera;
+       
+
+        void Awake()
+        {
+            m_mainCamera = Camera.main;
+        }
+
+
+        public bool MoveTo(Vector3 _endPos, Vector3 _rotation = default(Vector3))
+        {
+            bool _canMove = true;
+            MoveTransform();
+            return _canMove;
+        }
+
+        private void MoveTransform()
+        {
+            
+        }
+
+    }
+
+}
