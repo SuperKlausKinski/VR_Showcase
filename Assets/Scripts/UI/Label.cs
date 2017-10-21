@@ -16,7 +16,8 @@ namespace VRControlls.UI
         {
             get; private set;
         }
-
+        public bool SetLabelInteractable { set { GetComponent<Collider>().enabled = value; } }
+        public bool UseOnlyOnce;
         public LabelTemplate LabelObjectData;
         private GameObject m_labelGameObject;
         private Animator m_labelAnimator;
@@ -100,8 +101,17 @@ namespace VRControlls.UI
             Debug.Log("Active");
             if (Labelstate != LABELSTATES.IDLE) { return; }
             m_labelAnimator.SetTrigger("CLICK");
-            EventManager.Instance.InvokeEvent(LabelObjectData.OnClickEvent);
+            if (LabelObjectData.OnClickEvent != null)
+            {
+                EventManager.Instance.InvokeEvent(LabelObjectData.OnClickEvent);
+            }
+            
             Labelstate = LABELSTATES.CLOSED;
+            if (UseOnlyOnce)
+            {
+                Labelstate = LABELSTATES.CLOSED;
+                gameObject.SetActive(false);
+            }
         }
         //-------------------------------------------------------------------------------------------------------------
         private void HideLabel()
@@ -110,8 +120,8 @@ namespace VRControlls.UI
             if (Labelstate != LABELSTATES.IDLE) { return; }
             m_labelAnimator.SetTrigger("EXIT");
             Labelstate = LABELSTATES.CLOSED;
-        }
-        //-------------------------------------------------------------------------------------------------------------
 
+        }
+ 
     }
 }

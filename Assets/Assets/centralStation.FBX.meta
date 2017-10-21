@@ -1,71 +1,15 @@
 fileFormatVersion: 2
-guid: 6e59c533d46e8a442bbc795ae436fc89
-timeCreated: 1506975465
+guid: b0bc0e35d6dc63648b245d1fb58439c7
+timeCreated: 1507062700
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Box001
-    100004: Box002
-    100006: Box003
-    100008: Box004
-    100010: Circles
-    100012: Cylinder001
-    100014: Object001
-    100016: rings
-    100018: roof
-    100020: objectStand
-    100022: Room
     400000: //RootNode
-    400002: Box001
-    400004: Box002
-    400006: Box003
-    400008: Box004
-    400010: Circles
-    400012: Cylinder001
-    400014: Object001
-    400016: rings
-    400018: roof
-    400020: objectStand
-    400022: Room
     2300000: //RootNode
-    2300002: Box001
-    2300004: Box002
-    2300006: Box003
-    2300008: Box004
-    2300010: Circles
-    2300012: Cylinder001
-    2300014: Object001
-    2300016: rings
-    2300018: roof
-    2300020: objectStand
-    2300022: Room
     3300000: //RootNode
-    3300002: Box001
-    3300004: Box002
-    3300006: Box003
-    3300008: Box004
-    3300010: Circles
-    3300012: Cylinder001
-    3300014: Object001
-    3300016: rings
-    3300018: roof
-    3300020: objectStand
-    3300022: Room
-    4300000: floor
-    4300002: Box003
-    4300004: Box001
-    4300006: Box002
-    4300008: Cylinder001
-    4300010: Circles
-    4300012: Object001
-    4300014: Box004
-    4300016: rings
-    4300018: roof
-    4300020: Room
-    4300022: objectStand
-    7400000: Take 001
+    4300000: centralStation
     9500000: //RootNode
   materials:
     importMaterials: 1

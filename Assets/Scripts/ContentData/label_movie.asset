@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c056fb2821f38048a5840d3e35d640c, type: 3}
+  m_Name: label_movie
+  m_EditorClassIdentifier: 
+  LabelBaseObject: {fileID: 1136632073048514, guid: 157fb8f13a379524ea9474ed1cb044fe,
+    type: 2}
+  LabelImage: {fileID: 0}
+  LabelText: Touch to start video
+  OnClickEvent: START_VIDEO

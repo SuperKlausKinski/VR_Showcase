@@ -11,7 +11,7 @@ namespace VRControlls.Animation
     {
         [Header("Settings")]
         [Range(0, 1)]
-        //public float TargetSize = 0.1f;
+
         public float GroundLevel;
         public float Speed;
         private Camera m_mainCamera;
@@ -34,7 +34,7 @@ namespace VRControlls.Animation
             m_originalFov = m_mainCamera.fieldOfView;
             m_originalSize = m_mainCamera.transform.position.y - GroundLevel;
             Debug.Log(CurrentSize);
-           // CurrentSize = .5f;
+
         }
         void Start()
         {
@@ -44,6 +44,12 @@ namespace VRControlls.Animation
 
         public void Resize(float _size)
         {
+            if (_size == 1)
+            {
+                gameObject.transform.DOMoveY(m_originalSize, Speed);
+                m_mainCamera.DOFieldOfView(m_originalFov, Speed).OnComplete(() => ResizeComplete());
+                return;
+            }
             gameObject.transform.DOMoveY(gameObject.transform.position.y*_size, Speed);
             m_mainCamera.DOFieldOfView(m_originalFov*_size, Speed).OnComplete(()=>ResizeComplete());          
         }
