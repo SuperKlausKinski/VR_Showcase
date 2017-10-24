@@ -8,6 +8,7 @@ using DG.Tweening;
 public class InteractableObject : MonoBehaviour {
 
     public string ListenForEvent;
+    public float Delay = 0;
     public UnityEvent EventToTrigger;
     private UnityAction m_listenForEvent;
 
@@ -26,7 +27,7 @@ public class InteractableObject : MonoBehaviour {
     }
     private void TriggerEvent()
     {
-        EventToTrigger.Invoke();
+        DOVirtual.DelayedCall(Delay,()=> EventToTrigger.Invoke());    
     }
 
 }

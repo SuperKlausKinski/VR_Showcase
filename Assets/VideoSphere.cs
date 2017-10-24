@@ -9,6 +9,7 @@ namespace VRShowcase.Media
 {
     public class VideoSphere : Singleton<VideoSphere>
     {
+
         public enum VIDEOPLAYERSTATES { OFF, TRANSITION, PLAYING, STOP }
 
         public VIDEOPLAYERSTATES VideoPlayerState { get; private set; }
