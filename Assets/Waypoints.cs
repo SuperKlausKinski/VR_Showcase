@@ -10,9 +10,9 @@ namespace VRControlls.Navigation
     {
         private Waypoint[] m_waypoints;
 
-        void Start()
+        void Awake()
         {
-     
+            base.Awake();
             m_waypoints = GetComponentsInChildren<Waypoint>();
 
         }
@@ -23,8 +23,19 @@ namespace VRControlls.Navigation
             {
                 foreach (Waypoint _c in m_waypoints)
                 {
-                    Debug.Log(_c.name);
+                    if (_c.WaypointState == Waypoint.WAYPOINTSTATE.OCCUPIED)
+                        continue;
                     _c.gameObject.GetComponent<Collider>().enabled = value;
+                    if (value)
+                    {
+                        _c.WaypointState = Waypoint.WAYPOINTSTATE.IDLE;
+                    }
+                    else
+                    {
+                       
+                        _c.WaypointState = Waypoint.WAYPOINTSTATE.INACTIVE;
+                    }
+                    
                 }
             }
         }

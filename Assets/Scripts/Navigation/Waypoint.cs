@@ -10,16 +10,18 @@ namespace VRControlls.Navigation
     [RequireComponent(typeof(Collider))]
     public class Waypoint : MonoBehaviour
     {
-        public enum WAYPOINTSTATE { IDLE, TRANSITIONING, OCCUPIED }
+        public enum WAYPOINTSTATE { IDLE, INACTIVE, OCCUPIED }
         public WAYPOINTSTATE WaypointState { get { return m_wayPointState; } set { changeState(value); } }
       
 
         [Header("Optional sub gameobjects root")]
         public GameObject WaypointRoot;
         [Header("Broadcast Messages/Trigger to children")]
+
         public string OnEnter;
         public string OnClick;
         public string OnExit;
+
         [Header("Optional Events")]
         public UnityEvent OnOccupiedEvent;
         public UnityEvent OnLeaveEvent;
@@ -29,6 +31,7 @@ namespace VRControlls.Navigation
         //-------------------------------------------------------------------------------------------------------------
         private void changeState(WAYPOINTSTATE _state)
         {
+           
             m_wayPointState = _state;
             switch (_state)
             {
@@ -36,18 +39,33 @@ namespace VRControlls.Navigation
                     HideWaypoint();
                     break;
                 case (WAYPOINTSTATE.IDLE):
+                    if(WaypointRoot!=null)ActivateWayPointAsset();
                     ShowWaypoint();
                     break;
-                case (WAYPOINTSTATE.TRANSITIONING):
+                case (WAYPOINTSTATE.INACTIVE):
+                    if (WaypointRoot != null) DeactivateWayPointAsset();
                     break;
             }
         }
         //-------------------------------------------------------------------------------------------------------------
         void Awake()
         {
-            WaypointState = WAYPOINTSTATE.IDLE;
+            WaypointState = WAYPOINTSTATE.INACTIVE;
             m_player = GameObject.FindGameObjectWithTag("Player");
             AddEventListeners();
+        }//-------------------------------------------------------------------------------------------------------------
+        private void ActivateWayPointAsset()
+        {
+       
+                BroadcastMessage("EventFromParent", "ACTIVATE", SendMessageOptions.DontRequireReceiver);
+             
+        }
+        //-------------------------------------------------------------------------------------------------------------
+        private void DeactivateWayPointAsset()
+        {
+      
+                BroadcastMessage("EventFromParent", "DEACTIVATE", SendMessageOptions.DontRequireReceiver);
+                   
         }
         //-------------------------------------------------------------------------------------------------------------
         private void AddEventListeners()
@@ -112,7 +130,11 @@ namespace VRControlls.Navigation
         //-------------------------------------------------------------------------------------------------------------
         private void ShowWaypoint()
         {
-            if (WaypointRoot) { WaypointRoot.SetActive(true); }
+            if (WaypointRoot)
+            {           
+                WaypointRoot.SetActive(true);             
+                BroadcastMessage("EventFromParent", "ACTIVATE", SendMessageOptions.DontRequireReceiver);
+            }
             else
             {
                 gameObject.GetComponent<MeshRenderer>().enabled = true;

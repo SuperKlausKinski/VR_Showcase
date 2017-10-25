@@ -19,7 +19,10 @@ namespace VRControlls.Animation
         //-------------------------------------------------------------------------------------------------------------
         public void EventFromParent(string _triggerName)
         {
-            m_animator.SetTrigger(_triggerName);
+            Debug.Log(_triggerName);
+            
+                    m_animator.SetTrigger(_triggerName);
+ 
         }
     }
 

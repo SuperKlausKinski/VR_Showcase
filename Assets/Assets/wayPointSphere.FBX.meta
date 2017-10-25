@@ -9,22 +9,40 @@ ModelImporter:
     100002: waypointSphere_bottom
     100004: waypointSphere_middle
     100006: waypointSphere_top
+    100008: objectStand
+    100010: rings
+    100012: Room
+    100014: waypointSphere
     400000: //RootNode
     400002: waypointSphere_bottom
     400004: waypointSphere_middle
     400006: waypointSphere_top
+    400008: objectStand
+    400010: rings
+    400012: Room
+    400014: waypointSphere
     2300000: waypointSphere_bottom
     2300002: waypointSphere_middle
     2300004: waypointSphere_top
+    2300006: objectStand
+    2300008: rings
+    2300010: Room
     3300000: waypointSphere_bottom
     3300002: waypointSphere_middle
     3300004: waypointSphere_top
+    3300006: objectStand
+    3300008: rings
+    3300010: Room
     4300000: waypointSphere_bottom
     4300002: waypointSphere_middle
     4300004: waypointSphere_top
+    4300006: Room
+    4300008: rings
+    4300010: objectStand
     7400000: Open
     7400002: Idle
     7400004: Close
+    7400006: Inactive
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -89,7 +107,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -118,6 +136,34 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Inactive
+      takeName: Take 001
+      firstFrame: 26
+      lastFrame: 27
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
