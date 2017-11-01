@@ -3,7 +3,7 @@ guid: e3cfe396e632c974e9413b89f6801415
 timeCreated: 1507064313
 licenseType: Free
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: box
     100002: button_right
@@ -42,11 +42,24 @@ ModelImporter:
     4300008: button_right
     4300010: rotateLeft
     4300012: rotateRight
+    7400000: Take 001
     9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: box
+    second: {fileID: 2100000, guid: eca5aa4921ef8e24dac85e1b42946e27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: objectStand
+    second: {fileID: 2100000, guid: 0ffa9e728f95f4f46b5895670e7f7adf, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -59,6 +72,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

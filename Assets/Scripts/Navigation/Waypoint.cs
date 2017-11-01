@@ -117,6 +117,12 @@ namespace VRControlls.Navigation
 
         }
         //-------------------------------------------------------------------------------------------------------------
+        public void MoveTo()
+        {
+            m_player.GetComponent<WaypointNavigation>().MoveTo(this, gameObject.transform.position);
+            OnOccupy();
+        }
+        //-------------------------------------------------------------------------------------------------------------
         private void HideWaypoint()
         {
             if (WaypointRoot) { WaypointRoot.SetActive(false); }
