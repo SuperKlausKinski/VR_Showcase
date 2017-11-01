@@ -3,7 +3,7 @@ guid: 6e59c533d46e8a442bbc795ae436fc89
 timeCreated: 1506975465
 licenseType: Free
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
     100002: Box001
@@ -17,6 +17,21 @@ ModelImporter:
     100018: roof
     100020: objectStand
     100022: Room
+    100024: animationLabel
+    100026: box
+    100028: button_right
+    100030: button_wrong
+    100032: centralStation
+    100034: interactiveLabel
+    100036: light
+    100038: mediaLabel
+    100040: perspectiveLabel
+    100042: rotateLeft
+    100044: rotateRight
+    100046: waypointSphere
+    100048: waypointSphere_bottom
+    100050: waypointSphere_middle
+    100052: waypointSphere_top
     400000: //RootNode
     400002: Box001
     400004: Box002
@@ -29,6 +44,21 @@ ModelImporter:
     400018: roof
     400020: objectStand
     400022: Room
+    400024: animationLabel
+    400026: box
+    400028: button_right
+    400030: button_wrong
+    400032: centralStation
+    400034: interactiveLabel
+    400036: light
+    400038: mediaLabel
+    400040: perspectiveLabel
+    400042: rotateLeft
+    400044: rotateRight
+    400046: waypointSphere
+    400048: waypointSphere_bottom
+    400050: waypointSphere_middle
+    400052: waypointSphere_top
     2300000: //RootNode
     2300002: Box001
     2300004: Box002
@@ -41,6 +71,20 @@ ModelImporter:
     2300018: roof
     2300020: objectStand
     2300022: Room
+    2300024: animationLabel
+    2300026: box
+    2300028: button_right
+    2300030: button_wrong
+    2300032: centralStation
+    2300034: interactiveLabel
+    2300036: light
+    2300038: mediaLabel
+    2300040: perspectiveLabel
+    2300042: rotateLeft
+    2300044: rotateRight
+    2300046: waypointSphere_bottom
+    2300048: waypointSphere_middle
+    2300050: waypointSphere_top
     3300000: //RootNode
     3300002: Box001
     3300004: Box002
@@ -53,6 +97,20 @@ ModelImporter:
     3300018: roof
     3300020: objectStand
     3300022: Room
+    3300024: animationLabel
+    3300026: box
+    3300028: button_right
+    3300030: button_wrong
+    3300032: centralStation
+    3300034: interactiveLabel
+    3300036: light
+    3300038: mediaLabel
+    3300040: perspectiveLabel
+    3300042: rotateLeft
+    3300044: rotateRight
+    3300046: waypointSphere_bottom
+    3300048: waypointSphere_middle
+    3300050: waypointSphere_top
     4300000: floor
     4300002: Box003
     4300004: Box001
@@ -65,12 +123,63 @@ ModelImporter:
     4300018: roof
     4300020: Room
     4300022: objectStand
+    4300024: waypointSphere_middle
+    4300026: waypointSphere_bottom
+    4300028: waypointSphere_top
+    4300030: centralStation
+    4300032: box
+    4300034: button_wrong
+    4300036: light
+    4300038: button_right
+    4300040: rotateLeft
+    4300042: rotateRight
+    4300044: interactiveLabel
+    4300046: animationLabel
+    4300048: perspectiveLabel
+    4300050: mediaLabel
     7400000: Take 001
     9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default
+    second: {fileID: 2100000, guid: a33db1bf580b0394597ff34772e7de74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 3f8ada0166c485140bb826de00af8a79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: box
+    second: {fileID: 2100000, guid: eca5aa4921ef8e24dac85e1b42946e27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: centralStation
+    second: {fileID: 2100000, guid: d7de5f9f8667dd34f86d397540950f72, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: objectStand
+    second: {fileID: 2100000, guid: 0ffa9e728f95f4f46b5895670e7f7adf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: room
+    second: {fileID: 2100000, guid: 89fa35939a000e54792bffcc1ab3a683, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wayPointSphere_middle
+    second: {fileID: 2100000, guid: c9566143dffdb904e8018adc6bcd5506, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -83,6 +192,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
