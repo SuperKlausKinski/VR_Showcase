@@ -8,7 +8,8 @@ namespace VRControlls.UI
     public class LabelTemplate : ScriptableObject
     {
         public GameObject LabelBaseObject;
-        public Image LabelImage;
+        public Sprite LabelImage;
+        public Sprite DefaultLabel;
         public string LabelText;
         public string OnClickEvent;
     }

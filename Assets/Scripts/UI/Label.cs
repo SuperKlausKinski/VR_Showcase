@@ -22,6 +22,7 @@ namespace VRControlls.UI
         private GameObject m_labelGameObject;
         private Animator m_labelAnimator;
         private Text m_labelText;
+        private Image m_labelImage;
         private Camera m_Camera;
         //-------------------------------------------------------------------------------------------------------------
         void Awake()
@@ -79,8 +80,12 @@ namespace VRControlls.UI
 
             m_labelText = m_labelGameObject.transform.Find("LabelRoot/LabelText").GetComponent<Text>();
             m_labelText.text = LabelObjectData.LabelText;
+            m_labelText.gameObject.SetActive(false);
+            m_labelImage = m_labelGameObject.transform.Find("LabelRoot/LabelImage").GetComponent<Image>();
+            m_labelImage.sprite = LabelObjectData.DefaultLabel;
             Labelstate = LABELSTATES.CLOSED;
             m_labelAnimator = m_labelGameObject.GetComponent<Animator>();
+            Debug.Log("Label Image" + m_labelImage.gameObject.name);
         }
         //-------------------------------------------------------------------------------------------------------------
         private void ShowLabel()
@@ -95,6 +100,8 @@ namespace VRControlls.UI
             if (Labelstate != LABELSTATES.CLOSED) { return; }
             m_labelAnimator.SetTrigger("HOVER");
             Labelstate = LABELSTATES.IDLE;
+            m_labelImage.sprite = LabelObjectData.LabelImage;
+            m_labelText.gameObject.SetActive(true);
         }
         private void ActivateLabel()
         {
@@ -120,7 +127,8 @@ namespace VRControlls.UI
             if (Labelstate != LABELSTATES.IDLE) { return; }
             m_labelAnimator.SetTrigger("EXIT");
             Labelstate = LABELSTATES.CLOSED;
-
+            m_labelImage.sprite = LabelObjectData.DefaultLabel;
+            m_labelText.gameObject.SetActive(false);
         }
  
     }

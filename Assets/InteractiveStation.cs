@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using VRControlls.UI;
+using DG.Tweening;
 
 namespace VRControlls.Demo
 {
@@ -11,9 +12,19 @@ namespace VRControlls.Demo
         public STATIONSTATE StationState;
         public float RotationSpeed;
         public Transform Box;
+
         public Label[]   Label;
+        public Collider[] Collider;
+        
         //-------------------------------------------------------------------------------------------------------------
         private float m_direction;
+        private Material m_lightMaterial;
+        //-------------------------------------------------------------------------------------------------------------
+        void Awake()
+        {
+            ToggleStationInteractability(false);
+            m_lightMaterial = Box.Find("light").GetComponent<Renderer>().material;
+        }
         //-------------------------------------------------------------------------------------------------------------
         void Update()
         {
@@ -42,6 +53,24 @@ namespace VRControlls.Demo
             }
         }
         //-------------------------------------------------------------------------------------------------------------
+        public void ToggleStationInteractability(bool _active)
+        {
+            foreach (Collider _col in Collider)
+            {
+                _col.enabled = _active;
+            }
+        }
+        //-------------------------------------------------------------------------------------------------------------
+        public void FlashGreen()
+        {
+            Debug.Log("FlashGreen");
+            m_lightMaterial.DOColor(Color.green, "_Color", 0.5f).SetLoops(3, LoopType.Yoyo).OnComplete(()=>m_lightMaterial.color = Color.white);
+        }
+        public void FlashRed()
+        {
+            Debug.Log("FlashRed");
+            m_lightMaterial.DOColor(Color.red, "_Color", 0.5f).SetLoops(3, LoopType.Yoyo).OnComplete(() => m_lightMaterial.color = Color.white); ;
+        }
     }
 
 }

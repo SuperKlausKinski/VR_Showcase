@@ -14,5 +14,6 @@ MonoBehaviour:
   LabelBaseObject: {fileID: 1136632073048514, guid: e3671f277ee7f25469f1db7573541f15,
     type: 2}
   LabelImage: {fileID: 0}
+  DefaultLabel: {fileID: 21300000, guid: 3ba64f77ab1e5f54d9d2cdc172e8556b, type: 3}
   LabelText: Start Video
   OnClickEvent: START_VIDEO
