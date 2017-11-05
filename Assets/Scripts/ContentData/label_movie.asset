@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LabelBaseObject: {fileID: 1136632073048514, guid: 157fb8f13a379524ea9474ed1cb044fe,
     type: 2}
-  LabelImage: {fileID: 21300000, guid: 25aba735c9ddf574fa29845715474fb6, type: 3}
+  LabelImage: {fileID: 21300000, guid: 645a066de73449846a6974562c86a253, type: 3}
   DefaultLabel: {fileID: 21300000, guid: 3ba64f77ab1e5f54d9d2cdc172e8556b, type: 3}
   LabelText: Touch to start video
   OnClickEvent: START_VIDEO

@@ -57,6 +57,7 @@ namespace VRControlls.Demo
         {
             foreach (Collider _col in Collider)
             {
+                if (_col == null) { Debug.LogWarning("Collider missing in collider list at" + gameObject.name);  continue; }
                 _col.enabled = _active;
             }
         }
