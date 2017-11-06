@@ -16,4 +16,4 @@ MonoBehaviour:
   LabelImage: {fileID: 21300000, guid: abdf7b769ee81dc47b125d1f6d319e9f, type: 3}
   DefaultLabel: {fileID: 21300000, guid: 3ba64f77ab1e5f54d9d2cdc172e8556b, type: 3}
   LabelText: Spatial Audio can enrich your experience
-  OnClickEvent: 
+  OnClickEvent: PLAY_AUDIO
