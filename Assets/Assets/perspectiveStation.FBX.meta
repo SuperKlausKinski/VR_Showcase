@@ -3,18 +3,198 @@ guid: ad8aa5fefd74d004fa3f8a82987adc06
 timeCreated: 1507219735
 licenseType: Free
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: animationLabel
+    100004: box
+    100006: button_right
+    100008: button_wrong
+    100010: centralStation
+    100012: CoronaLight001
+    100014: CoronaLight002
+    100016: CoronaLight003
+    100018: CoronaLight004
+    100020: CoronaLight005
+    100022: CoronaLight006
+    100024: Cylinder004
+    100026: interactiveLabel
+    100028: light
+    100030: mediaLabel
+    100032: MediaStation
+    100034: objectStand
+    100036: perspectiveLabel
+    100038: PerspectiveStation
+    100040: PhysCamera001
+    100042: PhysCamera001.Target
+    100044: rings
+    100046: Room
+    100048: rotateLeft
+    100050: rotateRight
+    100052: SpeakerBoxes
+    100054: topLightGeo
+    100056: waypointSphere
+    100058: waypointSphere_bottom
+    100060: waypointSphere_middle
+    100062: waypointSphere_top
+    100064: wheel_00
+    100066: wheel_01
+    100068: wheel_02
     400000: //RootNode
+    400002: animationLabel
+    400004: box
+    400006: button_right
+    400008: button_wrong
+    400010: centralStation
+    400012: CoronaLight001
+    400014: CoronaLight002
+    400016: CoronaLight003
+    400018: CoronaLight004
+    400020: CoronaLight005
+    400022: CoronaLight006
+    400024: Cylinder004
+    400026: interactiveLabel
+    400028: light
+    400030: mediaLabel
+    400032: MediaStation
+    400034: objectStand
+    400036: perspectiveLabel
+    400038: PerspectiveStation
+    400040: PhysCamera001
+    400042: PhysCamera001.Target
+    400044: rings
+    400046: Room
+    400048: rotateLeft
+    400050: rotateRight
+    400052: SpeakerBoxes
+    400054: topLightGeo
+    400056: waypointSphere
+    400058: waypointSphere_bottom
+    400060: waypointSphere_middle
+    400062: waypointSphere_top
+    400064: wheel_00
+    400066: wheel_01
+    400068: wheel_02
     2300000: //RootNode
+    2300002: animationLabel
+    2300004: box
+    2300006: button_right
+    2300008: button_wrong
+    2300010: centralStation
+    2300012: Cylinder004
+    2300014: interactiveLabel
+    2300016: light
+    2300018: mediaLabel
+    2300020: MediaStation
+    2300022: objectStand
+    2300024: perspectiveLabel
+    2300026: PerspectiveStation
+    2300028: rings
+    2300030: Room
+    2300032: rotateLeft
+    2300034: rotateRight
+    2300036: SpeakerBoxes
+    2300038: topLightGeo
+    2300040: waypointSphere_bottom
+    2300042: waypointSphere_middle
+    2300044: waypointSphere_top
+    2300046: wheel_00
+    2300048: wheel_01
+    2300050: wheel_02
     3300000: //RootNode
+    3300002: animationLabel
+    3300004: box
+    3300006: button_right
+    3300008: button_wrong
+    3300010: centralStation
+    3300012: Cylinder004
+    3300014: interactiveLabel
+    3300016: light
+    3300018: mediaLabel
+    3300020: MediaStation
+    3300022: objectStand
+    3300024: perspectiveLabel
+    3300026: PerspectiveStation
+    3300028: rings
+    3300030: Room
+    3300032: rotateLeft
+    3300034: rotateRight
+    3300036: SpeakerBoxes
+    3300038: topLightGeo
+    3300040: waypointSphere_bottom
+    3300042: waypointSphere_middle
+    3300044: waypointSphere_top
+    3300046: wheel_00
+    3300048: wheel_01
+    3300050: wheel_02
     4300000: PerspectiveStation
+    4300002: Room
+    4300004: rings
+    4300006: waypointSphere_middle
+    4300008: waypointSphere_bottom
+    4300010: waypointSphere_top
+    4300012: centralStation
+    4300014: box
+    4300016: button_wrong
+    4300018: light
+    4300020: button_right
+    4300022: rotateLeft
+    4300024: rotateRight
+    4300026: interactiveLabel
+    4300028: animationLabel
+    4300030: perspectiveLabel
+    4300032: mediaLabel
+    4300034: objectStand
+    4300036: topLightGeo
+    4300038: SpeakerBoxes
+    4300040: MediaStation
+    4300042: wheel_00
+    4300044: wheel_01
+    4300046: Cylinder004
+    4300048: wheel_02
+    7400000: Take 001
     9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 01 - Default
+    second: {fileID: 2100000, guid: a33db1bf580b0394597ff34772e7de74, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 3f8ada0166c485140bb826de00af8a79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: box
+    second: {fileID: 2100000, guid: eca5aa4921ef8e24dac85e1b42946e27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: light
+    second: {fileID: 2100000, guid: 9421b64ec3016b041ad89c74a186e1c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: objectStand
+    second: {fileID: 2100000, guid: 0ffa9e728f95f4f46b5895670e7f7adf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: reflective
+    second: {fileID: 2100000, guid: dcf39b38518964f42947df59355a9bdd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wayPointSphere_middle
+    second: {fileID: 2100000, guid: c9566143dffdb904e8018adc6bcd5506, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -27,6 +207,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
