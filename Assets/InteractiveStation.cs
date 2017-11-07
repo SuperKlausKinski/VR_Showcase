@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using VRControlls.UI;
 using DG.Tweening;
+using GVR;
 
 namespace VRControlls.Demo
 {
@@ -12,18 +13,24 @@ namespace VRControlls.Demo
         public STATIONSTATE StationState;
         public float RotationSpeed;
         public Transform Box;
+        public GameObject Audio;
 
         public Label[]   Label;
         public Collider[] Collider;
-        
+
+       
+        public AudioClip RightAudio;
+        public AudioClip WrongAudio;
         //-------------------------------------------------------------------------------------------------------------
         private float m_direction;
         private Material m_lightMaterial;
+        private GvrAudioSource m_audioSource;
         //-------------------------------------------------------------------------------------------------------------
         void Awake()
         {
             ToggleStationInteractability(false);
             m_lightMaterial = Box.Find("light").GetComponent<Renderer>().material;
+            m_audioSource = Audio.GetComponent<GvrAudioSource>();
         }
         //-------------------------------------------------------------------------------------------------------------
         void Update()
@@ -64,12 +71,13 @@ namespace VRControlls.Demo
         //-------------------------------------------------------------------------------------------------------------
         public void FlashGreen()
         {
-            Debug.Log("FlashGreen");
-            m_lightMaterial.DOColor(Color.green, "_Color", 0.5f).SetLoops(3, LoopType.Yoyo).OnComplete(()=>m_lightMaterial.color = Color.white);
+            m_audioSource.PlayOneShot(RightAudio);
+            m_lightMaterial.DOColor(Color.green, "_Color", 0.5f).SetLoops(3, LoopType.Yoyo).OnComplete(()=>m_lightMaterial.color = Color.white);          
+            
         }
         public void FlashRed()
         {
-            Debug.Log("FlashRed");
+            m_audioSource.PlayOneShot(WrongAudio);
             m_lightMaterial.DOColor(Color.red, "_Color", 0.5f).SetLoops(3, LoopType.Yoyo).OnComplete(() => m_lightMaterial.color = Color.white); ;
         }
     }

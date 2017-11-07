@@ -111,6 +111,8 @@ namespace VRControlls.UI
             if (LabelObjectData.OnClickEvent != null)
             {
                 EventManager.Instance.InvokeEvent(LabelObjectData.OnClickEvent);
+                m_labelImage.sprite = LabelObjectData.DefaultLabel;
+                m_labelText.gameObject.SetActive(false);
             }
             
             Labelstate = LABELSTATES.CLOSED;
