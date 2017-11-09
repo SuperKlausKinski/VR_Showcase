@@ -33,7 +33,7 @@ namespace VRControlls.Animation
             m_mainCamera = Camera.main;
             m_originalFov = m_mainCamera.fieldOfView;
             m_originalSize = m_mainCamera.transform.position.y - GroundLevel;
-            Debug.Log(CurrentSize);
+          //  Debug.Log(CurrentSize);
 
         }
         void Start()

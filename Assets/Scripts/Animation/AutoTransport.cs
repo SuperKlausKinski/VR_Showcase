@@ -35,8 +35,8 @@ namespace VRControlls.Navigation
             foreach (Transform _waypoint in wayPointList[_index].transform)
             {
                 m_wayPointList.Add(_waypoint);
-                Debug.Log(_waypoint.localPosition);
-                Debug.Log(_waypoint.position);
+             //   Debug.Log(_waypoint.localPosition);
+              // Debug.Log(_waypoint.position);
             }
             AutoTransportState = AUTOTRANSPORTSTATE.MOVING;
 

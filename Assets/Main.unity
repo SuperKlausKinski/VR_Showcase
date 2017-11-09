@@ -5898,19 +5898,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efb031642682535459182f780d84eea0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.6600388
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efb031642682535459182f780d84eea0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.032673914
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efb031642682535459182f780d84eea0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.037107598
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efb031642682535459182f780d84eea0, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.74960274
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efb031642682535459182f780d84eea0, type: 3}
       propertyPath: m_RootOrder
@@ -5918,7 +5918,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efb031642682535459182f780d84eea0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.055044234
+      value: -0.05504423
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efb031642682535459182f780d84eea0, type: 3}
       propertyPath: m_LocalScale.y
@@ -5936,6 +5936,18 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0cdac33e2ecd26546acd7123ab0732f3, type: 2}
+    - target: {fileID: 400000, guid: efb031642682535459182f780d84eea0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -82.729004
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: efb031642682535459182f780d84eea0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -5.668
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: efb031642682535459182f780d84eea0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: efb031642682535459182f780d84eea0, type: 3}
   m_IsPrefabParent: 0

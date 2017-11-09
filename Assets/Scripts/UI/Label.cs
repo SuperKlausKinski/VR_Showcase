@@ -65,11 +65,11 @@ namespace VRControlls.UI
         //-------------------------------------------------------------------------------------------------------------
         void OnPointerEnter()
         {
-            Debug.Log("ENTER!");
+          //  Debug.Log("ENTER!");
         }
         private void InitLabel()
         {
-            Debug.Log("init label");
+           // Debug.Log("init label");
             m_Camera = Camera.main;
             m_labelGameObject = Instantiate(LabelObjectData.LabelBaseObject, transform.position, transform.rotation);
             m_labelGameObject.transform.SetParent(gameObject.transform);
@@ -85,18 +85,18 @@ namespace VRControlls.UI
             m_labelImage.sprite = LabelObjectData.DefaultLabel;
             Labelstate = LABELSTATES.CLOSED;
             m_labelAnimator = m_labelGameObject.GetComponent<Animator>();
-            Debug.Log("Label Image" + m_labelImage.gameObject.name);
+          //  Debug.Log("Label Image" + m_labelImage.gameObject.name);
         }
         //-------------------------------------------------------------------------------------------------------------
         private void ShowLabel()
         {
-            Debug.Log("Show");
+           // Debug.Log("Show");
 
         }
         //-------------------------------------------------------------------------------------------------------------
         private void HoverLabel()
         {
-            Debug.Log("Hover");
+           // Debug.Log("Hover");
             if (Labelstate != LABELSTATES.CLOSED) { return; }
             m_labelAnimator.SetTrigger("HOVER");
             Labelstate = LABELSTATES.IDLE;
@@ -105,7 +105,7 @@ namespace VRControlls.UI
         }
         private void ActivateLabel()
         {
-            Debug.Log("Active");
+          //  Debug.Log("Active");
             if (Labelstate != LABELSTATES.IDLE) { return; }
             m_labelAnimator.SetTrigger("CLICK");
             if (LabelObjectData.OnClickEvent != null)
@@ -125,7 +125,7 @@ namespace VRControlls.UI
         //-------------------------------------------------------------------------------------------------------------
         private void HideLabel()
         {
-            Debug.Log("Hide");
+          //  Debug.Log("Hide");
             if (Labelstate != LABELSTATES.IDLE) { return; }
             m_labelAnimator.SetTrigger("EXIT");
             Labelstate = LABELSTATES.CLOSED;
