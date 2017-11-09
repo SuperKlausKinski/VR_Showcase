@@ -87,6 +87,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -102,6 +103,7 @@ MeshRenderer:
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -148,6 +150,7 @@ MonoBehaviour:
   CanvasGroup: {fileID: 225279154052598988}
   BlockingSphere: {fileID: 1473509714461776}
   Title: {fileID: 1871244786624160}
+  Speed: 1
 --- !u!114 &114482371814898894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -229,7 +232,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1871244786624160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 75.99999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224780501182019106}
@@ -247,7 +250,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1197696076707840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.82}
+  m_LocalPosition: {x: 0.030029297, y: -0.47000122, z: 1.82}
   m_LocalScale: {x: 0.0051291008, y: 0.0051290947, z: 0.005129101}
   m_Children:
   - {fileID: 4151996948949294}

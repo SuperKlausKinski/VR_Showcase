@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using GVR;
 
 namespace VRControlls.Demo
 {
     public class AnimationStation : MonoBehaviour
     {
         public Collider[] Collider;
+        public GvrAudioSource AudioSource;
 
         //-------------------------------------------------------------------------------------------------------------
         public void ToggleStationInteractability(bool _active)
@@ -17,6 +19,12 @@ namespace VRControlls.Demo
                 if (_col == null) { Debug.LogWarning("Collider missing in collider list at" + gameObject.name); continue; }
                 _col.enabled = _active;
             }
+        }
+        //-------------------------------------------------------------------------------------------------------------
+        public void Audio(bool _active)
+        {
+            if (_active) AudioSource.Play();
+            else AudioSource.Stop();
         }
         //-------------------------------------------------------------------------------------------------------------
     }

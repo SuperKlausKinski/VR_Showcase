@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using DG.Tweening;
 
 namespace VRControlls.Navigation
 {
@@ -12,7 +13,8 @@ namespace VRControlls.Navigation
     {
         public enum WAYPOINTSTATE { IDLE, INACTIVE, OCCUPIED }
         public WAYPOINTSTATE WaypointState { get { return m_wayPointState; } set { changeState(value); } }
-      
+        public Color HoverColor;
+        public Renderer HoverColorRenderer;
 
         [Header("Optional sub gameobjects root")]
         public GameObject WaypointRoot;
@@ -101,10 +103,12 @@ namespace VRControlls.Navigation
         {
             Debug.Log("enter!");
             if (OnEnter != null) BroadcastMessage("EventFromParent", OnEnter, SendMessageOptions.DontRequireReceiver);
+            HoverColorRenderer.material.DOColor(HoverColor, 0.5f);
         }
         public void OnPointerExit(BaseEventData _eventData)
         {
             if (OnExit != null) BroadcastMessage("EventFromParent", OnExit, SendMessageOptions.DontRequireReceiver);
+            HoverColorRenderer.material.DOColor(Color.white, 0.5f);
         }
 
         public void OnPointerClick(BaseEventData _eventData)
