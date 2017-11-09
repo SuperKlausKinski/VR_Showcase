@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: TestVideo
   m_EditorClassIdentifier: 
   VideoName: Test
-  Video: {fileID: 32900000, guid: 4c8a4a2a5aace1740a086d737e629192, type: 3}
+  Video: {fileID: 32900000, guid: 45de522f34abdf94786e6ef0e4130f61, type: 3}

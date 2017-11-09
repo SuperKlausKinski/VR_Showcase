@@ -157,6 +157,7 @@ ModelImporter:
     4300046: middleParts
     4300048: wheel_02
     4300050: pictureDisplay
+    4300052: pictureDisplay001
     7400000: Take 001
     9500000: //RootNode
   externalObjects:
@@ -169,7 +170,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: No Name
-    second: {fileID: 2100000, guid: 3f8ada0166c485140bb826de00af8a79, type: 2}
+    second: {fileID: 2100000, guid: 3620e0bb8b868594786565080ddee732, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
