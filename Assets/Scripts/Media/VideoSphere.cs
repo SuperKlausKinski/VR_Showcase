@@ -5,7 +5,7 @@ using UnityEngine.Video;
 using DG.Tweening;
 using VRControlls.Templates;
 using System;
-namespace VRShowcase.Media
+namespace VRControlls.Media
 {
     public class VideoSphere : Singleton<VideoSphere>
     {

@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Gvr;
 
 namespace VRControlls.Navigation
 {
     public class WaypointNavigation : MonoBehaviour
     {
+
+        public GvrAudioSource AudioSource;
+        public AudioClip AudioClip;
 
         private Camera m_mainCamera;
         private Waypoint m_currentWaypoint;
@@ -23,6 +26,7 @@ namespace VRControlls.Navigation
             // TODO sometimes there might be a reason to prohibit movement
             bool _canMove = true;
             MoveTransform(_endPos);
+            if (AudioSource) { AudioSource.PlayOneShot(AudioClip); }
             return _canMove;
         }
         //-------------------------------------------------------------------------------------------------------------

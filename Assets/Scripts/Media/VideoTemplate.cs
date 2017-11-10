@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 
-namespace VRControll.Media
+namespace VRControlls.Media
 {
 
 }
